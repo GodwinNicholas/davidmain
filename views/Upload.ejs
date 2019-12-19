@@ -1,0 +1,40 @@
+<%- include('./partials/Navbar.ejs', {page:"upload"}) %>
+
+<div class="upload container">
+
+    <div class="container white-text">
+        <h4>Upload Your Email List From A Text File</h4>
+    </div>
+
+    <form action="/upload" method="POST" class="upload-form" enctype="multipart/form-data">
+
+        <% if(msg.length > 0){ %>
+        <div class="chip grey white-text">
+            <strong><%= msg %></strong>
+        </div>
+        <% } %>
+
+        <div class="input-group">
+            <div class="col s12">
+                <input type="file" name="list" id="upload" accept="text/plain">
+                <label for="upload" class="white-text">Txt File</label>
+            </div>
+            <div class="col s12">
+                <button class="upload-btn btn" type="submit">
+                    Upload
+                    <i class="material-icons"> cloud_upload</i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="info-bg">
+        <p>Upload a text file with .txt extension containing your email list.</p>
+    </div>
+
+
+    <script>
+        var elems = document.querySelectorAll('.chips');
+        var instances = M.Chips.init(elems, options);
+    </script>
+</div>

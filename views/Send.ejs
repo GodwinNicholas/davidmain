@@ -1,0 +1,50 @@
+<%- include ('./partials/Navbar.ejs', {page:"send emails"}) %>
+
+<div class="container">
+    <form action="" method="post" class="sendmail">
+        <div class="row">
+            <div class="col s4">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="subject" type="text" id="autocomplete-input" class="autocomplete" required>
+                        <label for="autocomplete-input" class="white-text">Subject</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea name="body" id="textarea1" class="materialize-textarea" required></textarea>
+                        <label for="textarea1" class="white-text">Body</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 after-send ">
+                <div class="description container">
+                    <h4>Sending Emails, Please Wait...</h4>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                    <div class="message">
+                        <p>Do not Refresh or close this page!</p>
+                        <p>You will be redirected when all emails a sent</p>
+                        <p>Delivery Time Depends on number of email and connection</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="sendBtn pointer">Send <i class="material-icons">send</i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<script src="/js/sendmail.js"></script>

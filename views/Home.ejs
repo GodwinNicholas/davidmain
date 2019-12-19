@@ -1,0 +1,35 @@
+<%- include ('./partials/Navbar.ejs', {page:"home"}) %>
+<div class="container table-wrap">
+
+    <div class="container">
+        <form action="/deleteAll" class=" right" method="post">
+            <button class="btn red delBtn" type="submit">
+                Delete All <i class="material-icons  pointer">delete</i>
+            </button>
+        </form>
+    </div>
+    <table id="myTable" class="email-table">
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Type</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% emails.forEach(e => {%>
+            <tr>
+                <td><%= e.address %></td>
+                <td><%= emailType(e.address) %></td>
+                <td>
+                    <form action="/delete" method="POST">
+                        <input type="hidden" name="id" value="<%= e._id %>">
+                        <button><i class="material-icons red-text pointer">delete</i></button>
+                    </form>
+                </td>
+            </tr>
+            <%})%>
+        </tbody>
+    </table>
+</div>

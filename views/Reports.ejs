@@ -1,0 +1,44 @@
+<%- include ('./partials/Navbar.ejs', {page:"home"}) %>
+
+<div class="container reports">
+    <div class="wrapper">
+        <div class=" flex-dis">
+            <div class="success"><%= reports.sent.length %></div>
+            <span>Sent</span>
+        </div>
+        <div class=" flex-dis">
+            <div class="failed"><%= reports.failed.length %></div>
+            <span>Failed</span>
+        </div>
+    </div>
+    <hr>
+    <h4>Detailed Reports</h4>
+    <div class="container">
+        <ul class="collapsible white-text">
+            <li>
+                <div class="collapsible-header black ">Sent(<%= reports.sent.length %>) click to view</div>
+                <div class="collapsible-body">
+                    <ul>
+                        <% reports.sent.forEach(e => { %>
+                        <li><%= e %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header black ">Failed(<%= reports.failed.length %>) click to view</div>
+                <div class="collapsible-body">
+                    <ul>
+                        <% reports.failed.forEach(e => { %>
+                        <li><%= e %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+</script>

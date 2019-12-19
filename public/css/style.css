@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background:  #333939;
+}
+
+.removed{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.delBtn{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    background: #000;
+}
+
+
+nav .container{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav .branding a{
+    text-decoration: none;
+    color: #EF6010;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+
+nav .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    list-style: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+nav ul li a.active{
+    color: #EF6010;
+}
+
+/* homepage */
+.table-wrap{
+    background: #191919;
+    margin-top: 3rem;
+    border-radius: 20px;
+    padding: 15px;
+}
+.email-table{
+    background: #191919;
+}
+
+.table-wrap th,
+.table-wrap input,
+.dataTables_info{
+    color: #fff !important;
+}
+
+.table-wrap td{
+    background: #0f0d0d;
+    color: #fff;
+}
+
+.paginate_button,
+.paginate_button .current{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.sendmail{
+    margin: 3rem auto;
+    background:#191919;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.sendmail input{
+    color: #fff;
+}
+
+.sendmail textarea{
+    color: #fff;
+}
+
+.sendBtn{
+    background: #21A345;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.upload-form{
+    background: #0f0d0d;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff !important;
+}
+
+.info-bg{
+    background: #191919;
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.upload-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EF6010;
+    color: #fff;
+    padding: 0 5px;
+    width: 7em;
+    margin: 1.5rem 0;
+}
+
+.after-send{
+    background: #0f0d0d;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.after-send .description{
+    transition: 1s ease !important;
+    height: 0;
+    overflow: hidden;
+}
+
+.after-send .description > h4{
+    text-align: center;
+    font-size: 1.3rem !important;
+    position: relative;
+}
+
+.after-send .message{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.after-send .message p{
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: capitalize;
+    text-align: center;
+    transition: .6s ease-in-out;
+}
+.after-send .message p.show{
+    opacity: 1;
+}
+
+.reports{
+    background: #282626;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4rem auto;
+    color: #fff;
+}
+
+.success, .failed{
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+.success{
+    background: #36D01D;
+}
+.failed{
+    background: #D0481D;
+}
+
+.reports .wrapper{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.reports .wrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reports .wrapper span{
+    margin-left: 1rem;
+    font-size: 1.3rem;
+}
+.reports h4{
+    text-align: center;
+}
+
+.reports 
+

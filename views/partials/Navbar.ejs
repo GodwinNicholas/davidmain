@@ -1,0 +1,31 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">EmailBulk</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <% if(page == 'home' ){%>
+            <li><a href="/" class="active">email list</a></li>
+            <% } else { %>
+            <li><a href="/">email list</a></li>
+            <% } %>
+
+            <% if(page == 'send emails' ){%>
+            <li><a href="/send_email" class="active">send email</a></li>
+            <% } else { %>
+            <li><a href="/send_email">send email</a></li>
+            <% } %>
+
+            <% if(page == 'upload' ){%>
+            <li><a href="/uplaod" class="active">upload emails</a></li>
+            <% } else { %>
+            <li><a href="/upload">upload emails</a></li>
+            <% } %>
+        </ul>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="/">Email List</a></li>
+        <li><a href="/send">Send Email</a></li>
+        <li><a href="/upload">Upload Emails</a></li>
+    </ul>
+</nav>
