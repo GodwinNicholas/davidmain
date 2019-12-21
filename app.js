@@ -27,6 +27,8 @@ mongoose
     .catch(err => console.log(err));
 
 // EJS
+const viewsPath = path.join(__dirname, './views')
+app.set('views', viewsPath)
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
