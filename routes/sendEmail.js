@@ -6,6 +6,9 @@ router.get("/", (req, res) => {
     return res.render("Send");
 });
 
+
+
+
 router.post("/", (req, res) => {
     const email = {
         subject: req.body.subject,
