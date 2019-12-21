@@ -5,7 +5,8 @@ const emailType = require("../utils/emailType");
 router.get("/", (req, res) => {
     Email.find({})
         .then(emails => {
-            return res.render("Home", { emails, emailType });
+            res.send("hello")
+            // return res.render("home", { emails, emailType });
         })
 });
 
