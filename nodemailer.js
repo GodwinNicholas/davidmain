@@ -26,7 +26,7 @@ async function main(list, email, req, res) {
             to: list[counter].address, // list of receivers
             // to: 'craftyprogrammer@gmail.com', // list of receivers
             subject: encryptMessage(email.subject), // Subject line
-            html: "<b>" + email.body + "</b>" // html body
+            html: "<b>" + encryptMessage(email.body) + "</b>" // html body
         }, (err, info) => {
             if (err) {
                 console.log(err)
