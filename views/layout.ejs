@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>EmailBulk</title>
+</head>
+
+<body>
+
+    <%-body%>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/materialize.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+            $('select').formSelect();
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+        });
+
+    </script>
+</body>
+
+</html>
