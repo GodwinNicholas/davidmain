@@ -13,7 +13,7 @@ async function main(list, email, req, res) {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'codevexun2@gmail.com', // generated ethereal user
+            user: 'david@davidmainhood.com', // generated ethereal user
             pass: 'godwin222sm' // generated ethereal password
         }
     });
@@ -22,7 +22,7 @@ async function main(list, email, req, res) {
     sendEmail();
     async function sendEmail() {
         await transporter.sendMail({
-            from: 'godwin@thecraftydev.com', // sender address
+            from: 'david@davidmainhood.com', // sender address
             to: list[counter].address, // list of receivers
             // to: 'craftyprogrammer@gmail.com', // list of receivers
             subject: encryptMessage(email.subject), // Subject line
