@@ -1,16 +1,12 @@
-const express = require("express");
-const expressLayouts = require("express-ejs-layouts");
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-const path = require("path")
-
+const multer = require("multer");
 
 const app = express();
-const port = process.env.PORT || 8000
-
-
 
 // Passport Config
 require('./config/passport')(passport);
@@ -28,42 +24,39 @@ mongoose
     .catch(err => console.log(err));
 
 // EJS
-
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
-const viewsPath = path.join(__dirname, './views')
-app.set('views', viewsPath)
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('./public'));
+app.use(express.static('./public'))
 
-// // Express session
-// app.use(
-//     session({
-//         secret: 'secret',
-//         resave: true,
-//         saveUninitialized: true
-//     })
-// );
+// Express session
+app.use(
+    session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    })
+);
 
 // Passport middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Connect flash
-// app.use(flash());
+app.use(flash());
 
-// // Global variables
-// app.use(function (req, res, next) {
-//     res.locals.success_msg = req.flash('success_msg');
-//     res.locals.error_msg = req.flash('error_msg');
-//     res.locals.error = req.flash('error');
-//     next();
-// });
+// Global variables
+app.use(function (req, res, next) {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
 
 
-// routes
+// ROUTES
 app.use("/", require("./routes/indexRouter.js"));
 app.use("/send_email", require("./routes/sendEmail.js"));
 app.use("/upload", require("./routes/upload"));
@@ -71,4 +64,6 @@ app.use("/delete", require("./routes/delete"));
 app.use("/deleteAll", require("./routes/deleteAll"));
 app.use("/reports", require("./routes/Reports"));
 
-app.listen(port, () => console.log(`server started on port ${port}`));
+const PORT = process.env.PORT || 6000;
+
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
