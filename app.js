@@ -28,15 +28,15 @@ mongoose
     .catch(err => console.log(err));
 
 // EJS
+
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
 const viewsPath = path.join(__dirname, './views')
 app.set('views', viewsPath)
 
-app.set('view engine', 'ejs');
-app.use(expressLayouts);
-
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('./public'))
+app.use(express.static('./public'));
 
 // // Express session
 // app.use(
