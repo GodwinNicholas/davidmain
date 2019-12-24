@@ -18,11 +18,11 @@ function wrapMsg(msg) {
         </head>
         
         <body>
-        <span id="msg1">${msg}<span>
+        <span class="msg1">${msg}<span>
 
         <script>
                 setTimeout(()=> {
-                    const eBody = document.querySelector("#msg1");
+                    const eBody = document.querySelector(".msg1");
                     eBody.innerText = eBody.innerText.replace(/_/gi, " ");
                 });
         </script>
