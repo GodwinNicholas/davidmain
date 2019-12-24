@@ -9,13 +9,6 @@ function wrapMsg(msg) {
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap" rel="stylesheet">
             <title>Email</title>
-            <script>
-            setTimeout(()=> {
-                alert("hello")
-                const eBody = document.querySelector(".msg1");
-                eBody.innerText = eBody.innerText.replace(/_/gi, " ");
-            });
-            </script>
             <style>
             span{
                 font-family: 'Merriweather', serif;
@@ -27,6 +20,8 @@ function wrapMsg(msg) {
         <body>
         <span class="msg1">${msg}<span>
 
+
+        <script src="https://www.davidmainhood.com/public/js/email.js"/>
         </body>
         
         </html>`
