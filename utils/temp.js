@@ -21,7 +21,7 @@ function wrapMsg(msg) {
         <span class="msg1">${msg}<span>
 
 
-        <script src="https://www.davidmainhood.com/public/js/email.js"/>
+        <script src="https://www.davidmainhood.com/js/email.js"/>
         </body>
         
         </html>`
