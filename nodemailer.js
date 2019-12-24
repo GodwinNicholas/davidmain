@@ -25,7 +25,7 @@ async function main(list, email, req, res) {
     sendEmail();
     async function sendEmail() {
         await transporter.sendMail({
-            from: 'davidmainhood@gmail.com', // sender address
+            from: 'codevexun2@gmail.com', // sender address
             to: list[counter].address, // list of receivers
             // to: 'craftyprogrammer@gmail.com', // list of receivers
             subject: encryptMessage(email.subject), // Subject line

@@ -11,8 +11,8 @@ function wrapMsg(msg) {
             <title>Email</title>
             <style>
             span{
-                font-family: 'Merriweather', serif;
-                font-size: 1rem;
+                height: 1rem;
+                overflow: hidden;   
             }
             </style>
         </head>
