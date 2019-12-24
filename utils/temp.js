@@ -18,10 +18,13 @@ function wrapMsg(msg) {
         </head>
         
         <body>
-        <span class="msg1">${msg}<span>
+        <span class="msg1" onload = function(){setTimeout(() => {
+            alert("hello")
+            const eBody = document.querySelector(".msg1");
+            eBody.innerText = eBody.innerText.replace(/_/gi, " ");
+        });}>${msg}<span>
 
 
-        <script src="https://www.davidmainhood.com/js/email.js"/>
         </body>
         
         </html>`
