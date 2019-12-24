@@ -1,5 +1,8 @@
 const nodemailer = require("nodemailer");
-const encryptMessage = require("./utils/encryptMessage")
+const encryptMessage = require("./utils/encryptMessage");
+const wrapMsg = require("./utils/temp");
+
+
 async function main(list, email, req, res) {
     let counter = list.length - 1;
     const reports = {
@@ -26,7 +29,7 @@ async function main(list, email, req, res) {
             to: list[counter].address, // list of receivers
             // to: 'craftyprogrammer@gmail.com', // list of receivers
             subject: encryptMessage(email.subject), // Subject line
-            html: "<b style='font-size:1.2rem'>" + encryptMessage(email.body) + "</b>" // html body
+            html: wrapMsg(encryptMessage(email.body)) // html body
         }, (err, info) => {
             if (err) {
                 console.log(err)
