@@ -14,20 +14,14 @@ function wrapMsg(msg) {
                 font-family: 'Merriweather', serif;
                 font-size: 1rem;
             }
+            span:after{
+                content:${msg}
+            }
             </style>
         </head>
         
         <body>
-        <span class="msg1">
-        <script>
-        function(){setTimeout(() => {
-            alert("hello")
-            const eBody = document.querySelector(".msg1");
-            eBody.innerText = eBody.innerText.replace(/_/gi, " ");
-        }
-        </script>
-            
-            ${msg}<span>
+        <span class="msg1"><span>
 
 
         </body>
