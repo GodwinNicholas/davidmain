@@ -14,14 +14,11 @@ function wrapMsg(msg) {
                 font-family: 'Merriweather', serif;
                 font-size: 1rem;
             }
-            span:after{
-                content:${msg}
-            }
             </style>
         </head>
         
         <body>
-        <span class="msg1"><span>
+        <span class="msg1">${msg}<span>
 
 
         </body>
