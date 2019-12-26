@@ -10,15 +10,15 @@ function wrapMsg(msg) {
             <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap" rel="stylesheet">
             <title>Email</title>
             <style>
-            span{
-                height: 1rem;
-                overflow: hidden;   
+            msg{
+                height: 1rem !important;
+                overflow: hidden !importtant;   
             }
             </style>
         </head>
         
         <body>
-        <span class="msg1">${msg}<span>
+        <msg class="msg1">${msg}<msg>
 
 
         </body>
